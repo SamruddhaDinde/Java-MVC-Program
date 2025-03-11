@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.Pos?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<VBox alignment="CENTER" fx:controller="controller.Flights.ModifyFlightsController" styleClass="background" prefHeight="420.0" prefWidth="600.0" spacing="20" xmlns:fx="http://javafx.com/fxml/1">
+        <ImageView fitHeight="250" fitWidth="600">
+        <image>
+            <Image url="image\flight.png" />
+        </image>
+    </ImageView> 
+
+    <Separator/>
+        <Label text= "Add a Flight"  styleClass="heading"/>
+    <Separator/>
+
+    <GridPane alignment="CENTER" >
+            <Label  text="Airline:"  styleClass="label"  GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+            <TextField fx:id="airlineTf" styleClass="textfield" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+            <Label text="Flight Number:"  styleClass="label" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+            <TextField fx:id="flightNoTf" styleClass="textfield" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+             <Label  text="Takeoff:"  styleClass="label"  GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+            <TextField fx:id="takeoffTf" styleClass="textfield" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+            <Label text="Landing:"  styleClass="label" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+            <TextField fx:id="landingTf" styleClass="textfield" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+             <Label  text="Cost:"  styleClass="label"  GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+            <TextField fx:id="costTf" styleClass="textfield" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+            
+           
+
+    </GridPane>
+
+       <HBox alignment="CENTER" fillHeight="true" >          
+            <Button fx:id="addFlightBtn" disable="true" text="Add Flight" onAction="#handleAddButton" styleClass="button" prefWidth="4000"  prefHeight="40"/>
+            <Button  text="Close" onAction="#handleCloseButton"  styleClass="button"  prefWidth="4000" prefHeight="40"/>
+            </HBox>
+
+        <stylesheets>
+            <URL value="@../style.css"/>
+        </stylesheets>
+</VBox>
+

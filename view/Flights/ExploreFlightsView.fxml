@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.Pos?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<VBox alignment="CENTER" fx:controller="controller.Flights.ExploreFlightsController" styleClass="background" prefHeight="200.0" prefWidth="400.0" spacing="20" xmlns:fx="http://javafx.com/fxml/1">
+    <ImageView fitHeight="450" fitWidth="1000">
+        <image>
+            <Image url="image\flight.png" />
+        </image>
+    </ImageView>
+
+    <Separator/>
+        <Label fx:id="userLabel"  styleClass="heading"/>
+    <Separator/>
+
+   <HBox>
+    <Button  text="View All Flights" onAction="#handleViewButton" styleClass="button" prefWidth="4000"  prefHeight="40"/>
+    <Button  text="View Flights By Country" onAction="#handleFilterViewButton" styleClass="button" prefWidth="4000"  prefHeight="40"/>
+    <Button  text="Add Flight" onAction="#handleAddButton" styleClass="button" prefWidth="4000"  prefHeight="40"/>
+    <Button  text="Remove Flight" onAction="#handleRemoveButton" styleClass="button" prefWidth="4000"  prefHeight="40"/>
+    <Button  text="Close" onAction="#handleCloseButton" styleClass="button" prefWidth="4000"  prefHeight="40"/>
+   </HBox>
+
+   <stylesheets>
+            <URL value="@../style.css"/>
+   </stylesheets>
+       
+</VBox>

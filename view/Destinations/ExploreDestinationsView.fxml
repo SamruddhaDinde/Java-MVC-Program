@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.Pos?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<VBox alignment="CENTER" fx:controller="controller.Destinations.ExploreDestinationsController" styleClass="background" prefHeight="200.0" prefWidth="600.0" spacing="20" xmlns:fx="http://javafx.com/fxml/1">
+        <ImageView  fitHeight="450" fitWidth="1000">
+        <image>
+            <Image url="image\destination.png" />
+        </image>
+    </ImageView>
+
+    <Separator/>
+        <Label fx:id="userLabel"  styleClass="heading"/>
+    <Separator/>
+
+   <HBox>
+    <Button  text="View All Destinations" onAction="#handleViewButton" styleClass="button" prefWidth="4000"  prefHeight="40"/>
+    <Button  text="View Filtered Destination" onAction="#handleFilterViewButton" styleClass="button" prefWidth="4000"  prefHeight="40"/>
+    <Button  text="Add Destination" onAction="#handleAddButton" styleClass="button" prefWidth="4000"  prefHeight="40"/>
+    <Button  text="Remove Destination" onAction="#handleRemoveButton" styleClass="button" prefWidth="4000"  prefHeight="40"/>
+    <Button  text="Close" onAction="#handleCloseButton" styleClass="button" prefWidth="4000"  prefHeight="40"/>
+   </HBox>
+
+   <stylesheets>
+            <URL value="@../style.css"/>
+   </stylesheets>
+       
+</VBox>

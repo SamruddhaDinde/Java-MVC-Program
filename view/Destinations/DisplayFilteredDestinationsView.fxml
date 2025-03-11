@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.Pos?>
+<?import javafx.scene.*?>	
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" fx:controller="controller.Destinations.DisplayDestinationsController" styleClass="background" prefHeight="600.0" prefWidth="500.0" spacing="20" xmlns:fx="http://javafx.com/fxml/1">
+            <ImageView fitHeight="200" fitWidth="600">
+        <image>
+            <Image url="image\destination.png" />
+        </image>
+    </ImageView>
+
+    <Separator/>
+        <Label text= "Destinations"  styleClass="heading"/>
+    <Separator/>
+    <Label text= "Country"  styleClass="label"/>
+    <TextField fx:id="countryTf" prefHeight="25.0" prefWidth="200.0" />
+
+   <TableView fx:id="destinationsTv" >
+
+   <placeholder> <Label text="No Destinations" /> </placeholder>
+
+   <columns>
+      <TableColumn fx:id="nameClm" text="Name"   />
+        <TableColumn fx:id="countryClm" text="Country"   />    
+   </columns>
+   </TableView>
+
+   <Button  text="Close" onAction="#handleCloseButton" styleClass="button" maxWidth="1.7976931348623157E308"  />
+
+   <stylesheets>
+            <URL value="@../style.css"/>
+   </stylesheets>      
+</VBox>

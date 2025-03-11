@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>  
+
+<VBox alignment="CENTER" fx:controller="controller.Flights.DisplayFlightsController" styleClass="background" prefHeight="600.0" prefWidth="500.0" spacing="20" xmlns:fx="http://javafx.com/fxml/1">
+         <ImageView fitHeight="250" fitWidth="600">
+        <image>
+            <Image url="image\flight.png" />
+        </image>
+    </ImageView>
+
+    <Separator/>
+        <Label text= "Flights"  styleClass="heading"/>
+    <Separator/>
+
+   <TableView fx:id="flightsTv" >
+
+   <placeholder> <Label text="No Flights" /> </placeholder>
+
+   <columns>
+      <TableColumn fx:id="airlineClm" text="Airline"  />
+        <TableColumn fx:id="flightNoClm" text="Flight Number"  /> 
+        <TableColumn fx:id="takeoffClm" text="Takeoff Country"  />
+        <TableColumn fx:id="landingClm" text="Landing Country"  /> 
+        <TableColumn fx:id="costClm" text="Cost"  />
+       
+
+   </columns>
+   </TableView>
+
+   <Button  text="Close" onAction="#handleCloseButton" styleClass="button" maxWidth="1.7976931348623157E308"  />
+
+   <stylesheets>
+            <URL value="@../style.css"/>
+   </stylesheets>
+</VBox>

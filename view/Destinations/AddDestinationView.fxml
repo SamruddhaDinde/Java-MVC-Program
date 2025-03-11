@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.Pos?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.*?>	
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" fx:controller="controller.Destinations.ModifyDestinationsController" styleClass="background" prefHeight="420.0" prefWidth="600.0" spacing="20" xmlns:fx="http://javafx.com/fxml/1">
+            <ImageView fitHeight="200" fitWidth="600">
+        <image>
+            <Image url="image\destination.png" />
+        </image>
+    </ImageView> 
+
+    <Separator/>
+        <Label text= "Destinations"  styleClass="heading"/>
+    <Separator/>
+
+    <GridPane alignment="CENTER" >
+            <Label  text="Name:"  styleClass="label"  GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+            <TextField fx:id="nameTf"  GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+            <Label text="Country:"  styleClass="label" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+            <TextField fx:id="countryTf"  GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+           
+
+    </GridPane>
+
+       <HBox alignment="CENTER" fillHeight="true" >          
+            <Button fx:id="addButton" disable="true" text="Add Destination" onAction="#handleAddButton" styleClass="button" prefWidth="4000"  prefHeight="40"/>
+            <Button  text="Close" onAction="#handleCloseButton"  styleClass="button"  prefWidth="4000" prefHeight="40"/>
+            </HBox>
+
+        <stylesheets>
+            <URL value="@../style.css"/>
+        </stylesheets>
+</VBox>
